@@ -1,0 +1,99 @@
+\documentclass[border=10pt]{standalone} 
+\usepackage{tikzducks}
+\usepackage{tikzlings}
+\usetikzlibrary{positioning}
+\definecolor{marrone}{RGB}{215,151,66}
+\newcommand{\lett}[1]{\huge\bfseries\textcolor{red}{#1}}
+
+\begin{document} 
+\begin{tikzpicture}
+  \begin{scope}[xscale=-2, yscale=2]
+	\duck[ 
+	body=yellow!50!brown!40!white,
+	crazyhair=gray!50!white,
+	eyebrow,
+	glasses=brown!70!black,
+	]  
+	\end{scope}
+   \marmot[
+    yshift=6cm,xshift=2cm,
+    signpost={\lett{``l}},
+      signcolour= gray,
+    signback=white
+    ];
+  \bear[yshift=6cm,xshift=4cm,
+    signpost={\lett{o}},
+    signcolour= gray,
+    signback=white
+    ]
+  \koala[
+    yshift=6cm,xshift=6cm,
+    signpost={\lett{w}},
+    signcolour= gray,
+    signback=white
+    ]
+  \owl[ yshift=6cm,xshift=8cm,
+    signpost={\lett{e}},
+    signcolour= gray,
+    signback=white
+    ]
+  \mouse[
+    yshift=6cm,xshift=10cm,
+    signpost={\lett{r}},
+    signcolour= gray,
+    signback=white
+    ]
+  \sloth[ yshift=6cm,xshift=12cm,
+    signpost={\lett{c}},
+    signcolour= gray,
+    signback=white
+    ]
+  \moles[yshift=6cm,xshift=14cm,
+	signpost={\lett{a}},
+	signcolour= gray,
+	signback=white
+	] 
+  \coati[
+     yshift=6cm,xshift=16cm,
+    signpost={\lett{s}},
+    signcolour= gray,
+    signback=white
+    ]
+  \snowman[
+    yshift=6cm,xshift=18cm,
+    signpost={\lett{e}},
+    signcolour= gray,
+    signback=white
+    ]
+  \penguin[yshift=1cm,xshift=14cm,
+    signpost={\lett{r}},
+    signcolour= gray,
+    signback=white
+    ]
+   \marmot[yshift=1cm,xshift=16cm,
+   signpost={\lett{u}},
+   signcolour= gray,
+   signback=white
+   ];
+   \bear[yshift=1cm,xshift=18cm,
+   signpost={\lett{l}},
+   signcolour= gray,
+   signback=white
+   ]
+   \koala[yshift=1cm,xshift=20cm,
+   signpost={\lett{e''}},
+   signcolour= gray,
+   signback=white
+   ]
+   \begin{scope}[xshift=24cm, scale=2]
+	   \duck[cap]
+   \end{scope}
+    \node[red, font=\Huge, scale=4, line width=6pt, draw=brown, text 
+    width=8cm, 
+   text centered, outer sep=0pt] 
+   (writing) at 
+   (12,12) {Welcome Barbara!!!};
+   \draw[line width=6pt, brown] (writing.south west) -- +(2,-9); 
+   \draw[line width=6pt, brown] (writing.south east) -- +(-2,-9);
+\end{tikzpicture}
+\end{document}
