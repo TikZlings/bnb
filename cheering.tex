@@ -1,0 +1,54 @@
+% !TeX TS-program = pdflatex
+\documentclass{beamer}
+
+\usepackage{tikzlings}
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+
+\begin{frame}
+\begin{tikzpicture}[remember picture, overlay]
+
+\penguin[xshift=6.7cm,yshift=-1.8cm,scale=0.8]
+\marmot[xshift=7.2cm,yshift=-2cm,scale=0.8]
+\bear[xshift=1.5cm,yshift=-2cm,scale=0.8]
+
+
+\marmot[xshift=4cm,yshift=-2cm]
+\owl[xshift=3cm,yshift=-2.5cm+sin(10*\thepage)*cos(10*\thepage)*0.2cm]
+
+\sloth[xshift=6cm,yshift=-2.3cm]
+
+% pingu with lowercase sign %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mouse[xshift=5cm,yshift=-2.5cm]
+\begin{scope}[rotate around={10*sin(3*\thepage):(5.25,-1.7)},transform shape]
+\thing[signpost={\parbox{1cm}{\fontsize{5pt}{6pt}\selectfont\centering lowercase rules!}},xshift=5cm,yshift=-2cm]
+\end{scope}
+
+
+% Mouse with lowercase sign %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\penguin[xshift=2cm,yshift=-2.75cm]
+\begin{scope}[rotate around={10*cos(4*\thepage)+20:(2.25,-1.95)},transform shape]
+\thing[signpost={\parbox{1cm}{\fontsize{5pt}{6pt}\selectfont\centering boost our chat!}},xshift=2cm,yshift=-2.25cm]
+\end{scope}
+
+% Jumping tikzlings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\bear[xshift=9cm,yshift=-2.5cm+sin(10*\thepage)*cos(10*\thepage)*0.25cm]
+
+\koala[xshift=8cm,yshift=-2.5cm,scale=0.9]
+
+\coati[xshift=7cm,yshift=-3cm+sin(10*\thepage)*sin(10*\thepage)*0.3cm]
+\moles[xshift=1cm,yshift=-3cm+sin(10*\thepage)*sin(10*\thepage)*0.3cm]
+
+\sloth[xshift=4cm,yshift=-2.8cm,scale=0.8]
+\coati[xshift=5cm,yshift=-3cm,scale=0.8]
+
+
+\end{tikzpicture}
+\pause[180]
+\end{frame}
+
+\end{document}
