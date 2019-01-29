@@ -1,6 +1,7 @@
 % !TeX TS-program = pdflatex
 \documentclass{beamer}
 
+\usepackage{anyfontsize}
 \usepackage{tikzlings}
 \usepackage{tikzducks}
 \usetikzlibrary{positioning,shapes}
@@ -115,23 +116,23 @@
 	% Banner %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\node[
 		tape,
-		red, 
+		red!80!black, 
+		font=\fontfamily{cmfr}\fontsize{16}{16}\selectfont,
 		fill=white,
-		font=\Huge, 
 		scale=4, 
 		line width=6pt, 
 		draw=brown, 
 		text width=7cm,
-		text centered, 
+		text centered,
 		outer sep=0pt,
 		inner sep=0.2cm
-	] (writing) at (10,21) {Welcome Barbara!!!};
+	] (writing) at (10,21) {\rotatebox{2}{Welcome Barbara!!!}};
 	\draw[line width=6pt, brown] (writing.south west) -- +(1,-18); 
 	\draw[line width=6pt, brown] (writing.south east) -- +(-2,-18);
 \end{scope}
 
 \end{tikzpicture}
-\pause[360]
+\pause[1]
 \end{frame}
 
 \end{document}
