@@ -6,7 +6,7 @@
 \usepackage{tikzlings}
 \usepackage{tikzducks}
 \usetikzlibrary{positioning,shapes}
-
+\definecolor{sloth}{RGB}{137,126,88}
 \setbeamertemplate{navigation symbols}{}
 \setbeamercolor{background canvas}{bg=gray!70!blue!30!white}
 
@@ -14,6 +14,10 @@
 
 \begin{frame}
 \begin{tikzpicture}[remember picture, overlay]
+
+% confetti
+\node at ({5.4+cos(\thepage)},{28.8-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=1]{confetti}};
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -136,7 +140,65 @@
     at (13,24) {.};
 	\draw[line width=6pt, brown] (writing.south west) -- +(1,-18);
 	\draw[line width=6pt, brown] (writing.south east) -- +(-2,-18);
+	
+	\begin{scope}[yshift=20.5cm]
+		\fill[sloth!85!black] 
+		(0.988, -1.201) .. controls (0.814, -2.151) and (0.679, -2.765) .. 
+		(0.992, -3.416) .. controls (1.391, -4.247) and (2.502, -4.190) .. 
+		(3.125, -3.913) .. controls (4.041, -3.494) and (3.989, -2.799) .. 
+		(4.076, -2.200) -- 
+		(3.689, -2.200) .. controls (3.689, -2.100) and (3.660, -2.298) .. 
+		(3.512, -2.393) .. controls (3.265, -2.552) and (3.615, -1.702) .. 
+		(3.515, -1.300) .. controls (3.403, -0.849) and (3.085, -1.109) .. 
+		(3.050, -1.261) .. controls (3.130, -2.864) and (1.979, -3.248) .. 
+		(2.270, -2.235) -- 
+		(1.825, -2.189) .. controls (1.577, -2.521) and (1.824, -2.522) .. 
+		(1.622, -2.523) .. controls (1.122, -2.526) and (1.437, -1.535) .. 
+		(1.402, -1.154) .. controls (1.381, -0.923) and (1.017, -1.065) ..
+		(0.988, -1.201) -- cycle;	
+		% front paw
+		\fill[sloth!40!black] (3.25,-1.1) ellipse (0.06 and 0.18);
+		\fill[sloth!40!black,rotate around={-10:(3.4,-1.1)}] (3.4,-1.1) ellipse (0.06 and 0.18);
+		\fill[sloth!40!black,rotate around={10:(3.1,-1.15)}] (3.1,-1.15) ellipse (0.06 and 0.18);
+		% back paw
+		\fill[sloth!40!black] (1.21, -1.07) ellipse (0.06 and 0.18);
+		\fill[sloth!40!black,rotate around={-15:(1.37, -1.1)}] (1.37, -1.1) ellipse (0.06 and 0.18);
+		\fill[sloth!40!black,rotate around={10:(1.05, -1.1)}] (1.05, -1.1) ellipse (0.06 and 0.18);	
+	\end{scope}
+	\begin{scope}[scale=1.8,rotate=-30,yshift=7.5cm,xshift=-3.2cm]
+		% Head %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\fill[sloth] 
+		( 0.50,1.67) .. controls ( 0.50,1.91) and ( 0.27,2.10) .. 
+		( 0.00,2.10) .. controls (-0.27,2.10) and (-0.50,1.91) .. (-0.50,1.67) .. controls (-0.50,1.43) and (-0.33,1.28) .. 
+		( 0.00,1.28) .. controls ( 0.33,1.28) and ( 0.50,1.43) .. 
+		( 0.50,1.67) -- cycle;
+		\fill[sloth!50!white] ( 0.40,1.67) .. controls ( 0.40,1.90) and ( 0.12,2.09) .. ( 0.00,1.93) .. controls (-0.12,2.09) and (-0.40,1.90) .. (-0.40,1.67) .. controls (-0.40,1.45) and (-0.25,1.38) .. ( 0.00,1.38) .. controls ( 0.25,1.38) and ( 0.40,1.45) .. ( 0.40,1.67) -- cycle;
+		%
+		% behind the eyes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\fill[sloth!60!black] (0.3785,1.5336) .. controls (0.3012,1.5864) and (0.1829,1.6693) .. (0.1377,1.7234) .. controls (0.1184,1.7464) and (0.1624,1.8242) .. (0.1906,1.8137) .. controls (0.2673,1.7851) and (0.3597,1.7125) .. (0.3994,1.6531) .. controls (0.4129,1.6328) and (0.3785,1.5336) .. (0.3785,1.5336) -- cycle;
+		\fill[sloth!60!black] (-0.3785,1.5336) .. controls (-0.3012,1.5864) and (-0.1829,1.6693) .. (-0.1377,1.7234) .. controls (-0.1184,1.7464) and (-0.1624,1.8242) .. (-0.1906,1.8137) .. controls (-0.2673,1.7851) and (-0.3597,1.7125) .. (-0.3994,1.6531) .. controls (-0.4129,1.6328) and (-0.3785,1.5336) .. (-0.3785,1.5336) -- cycle;
+		%
+		% Eyes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\fill[black] (0.193,1.75) circle (0.04);
+		\fill[black] (-0.193,1.75) circle (0.04);
+		\fill[white] (-0.2  ,1.765) circle (0.006);
+		\fill[white] ( 0.186,1.765) circle (0.006);
+		%
+		% Nose %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\fill[sloth!40!black] (0,1.665) ellipse (0.078 and 0.048);
+		%
+		% Mouth %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\fill[sloth!40!black]  (0.115, 1.54) arc [start angle=-40, end angle=-140, radius=0.16] -- (-0.1, 1.54) -- (-0.1, 1.54) arc [start angle=-130, end angle=-50, radius=0.144] -- cycle;
+		%
+		% Hair %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\fill[sloth] (-0.1128,2.0724) .. controls (-0.1128,2.0724) and (-0.1499,2.2329) .. (-0.0972,2.2525) .. controls (-0.1082,2.1318) and (-0.0047,2.0839) .. (-0.0047,2.0839) .. controls (-0.0047,2.0839) and (-0.0219,2.1866) .. (0.0145,2.1933) .. controls (0.0142,2.1159) and (0.0770,2.0884) .. (0.0770,2.0884) -- cycle;
+	\end{scope}
+	
 \end{scope}
+
+% confetti
+\node at ({5.4+sin(\thepage)},{28.8-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=2]{confetti}};
+
 
 \end{tikzpicture}
 \pause[360]
