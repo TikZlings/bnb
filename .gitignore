@@ -1,0 +1,18 @@
+# .gitignore 
+
+
+# tex side-effects
+*.aux
+*.log
+*.out
+*.pdf
+*.tmp
+*.toc
+*.nav
+*.snm
+
+*.synctex
+*.synctex.gz
+
+*ls-R
+

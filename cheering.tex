@@ -1,6 +1,7 @@
 % !TeX TS-program = pdflatex
 \documentclass{beamer}
-
+\usepackage{emerald}
+%\usepackage[T1]{fontenc}
 \usepackage{anyfontsize}
 \usepackage{tikzlings}
 \usepackage{tikzducks}
@@ -108,7 +109,7 @@
 			crazyhair=gray!50!white,
 			eyebrow,
 			glasses=brown!70!black,
-		]  
+		]
 	\end{scope}
 	\begin{scope}[xshift=19cm, scale=3.5,yshift=-0.5cm]
 		\duck[cap]% Assistant %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,18 +117,24 @@
 	% Banner %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\node[
 		tape,
-		red!80!black, 
-		font=\fontfamily{cmfr}\fontsize{16}{16}\selectfont,
+		red!80!black,
+		font=\ECFTeenSpirit\fontsize{22}{22}\selectfont,
 		fill=white,
-		scale=4, 
-		line width=6pt, 
-		draw=brown, 
+		scale=4,
+		line width=6pt,
+		draw=brown,
 		text width=7cm,
 		text centered,
 		outer sep=0pt,
 		inner sep=0.2cm
 	] (writing) at (10,21) {\rotatebox{2}{Welcome Barbara!!!}};
-	\draw[line width=6pt, brown] (writing.south west) -- +(1,-18); 
+    \node[red!80!black,scale=4,
+		font=\ECFTeenSpirit\fontsize{22}{22}\selectfont,]
+    at (7,18.5) {.};
+      \node[red!80!black,scale=6,rotate=87,
+		font=\ECFTeenSpirit\fontsize{22}{22}\selectfont,]
+    at (13,24) {.};
+	\draw[line width=6pt, brown] (writing.south west) -- +(1,-18);
 	\draw[line width=6pt, brown] (writing.south east) -- +(-2,-18);
 \end{scope}
 
