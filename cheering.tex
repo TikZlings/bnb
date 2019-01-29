@@ -5,46 +5,74 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamercolor{background canvas}{bg=gray!70!blue!30!white}
 
-
 \begin{document}
 
 \begin{frame}
 \begin{tikzpicture}[remember picture, overlay]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Background crowd for cheering
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \penguin[xshift=6.7cm,yshift=-1.8cm,scale=0.8]
 \marmot[xshift=7.2cm,yshift=-2cm,scale=0.8]
 \bear[xshift=1.5cm,yshift=-2cm,scale=0.8]
 \marmot[xshift=4cm,yshift=-2cm]
 
-% jumping owl %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\owl[xshift=3cm,yshift=-2.5cm+sin(10*\thepage)*cos(10*\thepage)*0.2cm]
+\owl[% jumping owl %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	xshift=3cm,
+	yshift=-2.5cm+sin(10*\thepage)*cos(10*\thepage)*0.2cm
+]
 
 \sloth[xshift=6cm,yshift=-2.3cm]
 
-% pingu with lowercase sign %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\mouse[xshift=5cm,yshift=-2.5cm]
-\begin{scope}[rotate around={10*sin(3*\thepage):(5.25,-1.7)},transform shape]
-\thing[signpost={\parbox{1cm}{\fontsize{5pt}{6pt}\selectfont\centering lowercase rules!}},xshift=5cm,yshift=-2cm]
+\mouse[% mouse with lowercase sign %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	xshift=5cm,
+	yshift=-2.5cm
+]
+\begin{scope}[
+	rotate around={10*sin(3*\thepage):(5.25,-1.7)},
+	transform shape
+]
+	\thing[
+		signpost={\parbox{1cm}{\fontsize{5pt}{6pt}\selectfont\centering lowercase rules!}},
+		xshift=5cm,
+		yshift=-2cm
+	]
 \end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Mouse with "boost our chat" sign %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\penguin[xshift=2cm,yshift=-2.75cm]
-\begin{scope}[rotate around={10*cos(4*\thepage)+20:(2.25,-1.95)},transform shape]
-\thing[signpost={\parbox{1cm}{\fontsize{5pt}{6pt}\selectfont\centering boost our chat!}},xshift=2cm,yshift=-2.25cm]
+\penguin[% Pingu with "boost our chat" sign %%%%%%%%%%%%%%%%%%%%%%%%%%
+	xshift=2cm,
+	yshift=-2.75cm
+]
+\begin{scope}[
+	rotate around={10*cos(4*\thepage)+20:(2.25,-1.95)},
+	transform shape
+]
+	\thing[
+		signpost={\parbox{1cm}{\fontsize{5pt}{6pt}\selectfont\centering boost our chat!}},
+		xshift=2cm,
+		yshift=-2.25cm
+	]
 \end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% jumping bear %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bear[xshift=9cm,yshift=-2.5cm+sin(10*\thepage)*cos(10*\thepage)*0.25cm]
+\bear[% jumping bear %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	xshift=9cm,
+	yshift=-2.5cm+sin(10*\thepage)*cos(10*\thepage)*0.25cm
+]
 
 \koala[xshift=8cm,yshift=-2.5cm,scale=0.9]
 
-% jumping coati %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\coati[xshift=7cm,yshift=-3cm+sin(10*\thepage)*sin(10*\thepage)*0.3cm]
+\coati[% jumping coati %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	xshift=7cm,
+	yshift=-3cm+sin(10*\thepage)*sin(10*\thepage)*0.3cm
+]
 
-% jumping mole %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\moles[xshift=1cm,yshift=-3cm+sin(10*\thepage)*sin(10*\thepage)*0.3cm]
+\moles[% jumping mole %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	xshift=1cm,
+	yshift=-3cm+sin(10*\thepage)*sin(10*\thepage)*0.3cm
+]
 
 \sloth[xshift=4cm,yshift=-2.8cm,scale=0.8]
 \coati[xshift=5cm,yshift=-3cm,scale=0.8]
