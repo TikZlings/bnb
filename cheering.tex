@@ -14,6 +14,10 @@
 \begin{frame}
 \begin{tikzpicture}[remember picture, overlay]
 
+% confetti
+\node at ({5.4+cos(\thepage)},{28.8-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=1]{confetti}};
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Background crowd for cheering
@@ -184,6 +188,10 @@
 	\end{scope}
 	
 \end{scope}
+
+% confetti
+\node at ({5.4+sin(\thepage)},{28.8-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=2]{confetti}};
+
 
 \end{tikzpicture}
 \pause[360]
