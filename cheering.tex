@@ -2,6 +2,10 @@
 \documentclass{beamer}
 
 \usepackage{tikzlings}
+\usepackage{tikzducks}
+\usetikzlibrary{positioning}
+\definecolor{marrone}{RGB}{215,151,66}
+
 \setbeamertemplate{navigation symbols}{}
 \setbeamercolor{background canvas}{bg=gray!70!blue!30!white}
 
@@ -77,9 +81,42 @@
 \sloth[xshift=4cm,yshift=-2.8cm,scale=0.8]
 \coati[xshift=5cm,yshift=-3cm,scale=0.8]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Banner from Carla
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[scale=0.35,xshift=6cm,yshift=-13cm, transform shape]
+	\begin{scope}[xscale=-3, yscale=3]
+		\duck[% prof van duck %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			body=yellow!50!brown!40!white,
+			crazyhair=gray!50!white,
+			eyebrow,
+			glasses=brown!70!black,
+		]  
+	\end{scope}
+	\begin{scope}[xshift=18cm, scale=3]
+		\duck[cap]% Assistant %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\end{scope}
+	% Banner %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\node[
+		red, 
+		fill=white,
+		font=\Huge, 
+		scale=4, 
+		line width=6pt, 
+		draw=brown, 
+		text width=7cm,
+		text centered, 
+		outer sep=0pt,
+		inner sep=0.2cm
+	] (writing) at (10,20) {Welcome Barbara!!!};
+	\draw[line width=6pt, brown] (writing.south west) -- +(1,-15); 
+	\draw[line width=6pt, brown] (writing.south east) -- +(-2,-15);
+\end{scope}
 
 \end{tikzpicture}
-\pause[180]
+%\pause[180]
 \end{frame}
 
 \end{document}
