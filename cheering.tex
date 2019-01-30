@@ -16,7 +16,7 @@
 \begin{tikzpicture}[remember picture, overlay]
 
 % confetti
-\node at ({5.4+cos(\thepage)},{28.8-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=1]{confetti}};
+\node at ({5.4+cos(\thepage)},{49-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=1]{confetti}};
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,7 +141,7 @@
 	\draw[line width=6pt, brown] (writing.south west) -- +(1,-18);
 	\draw[line width=6pt, brown] (writing.south east) -- +(-2,-18);
 	
-	\begin{scope}[yshift=20.5cm]
+	\begin{scope}[yshift=19.5cm,xshift=2cm]
 		\fill[sloth!85!black]
 		(0.988, -1.201) .. controls (0.814, -2.151) and (0.679, -2.765) ..
 		(0.992, -3.416) .. controls (1.391, -4.247) and (2.502, -4.190) ..
@@ -165,7 +165,7 @@
 		\fill[sloth!40!black,rotate around={-15:(1.37, -1.1)}] (1.37, -1.1) ellipse (0.06 and 0.18);
 		\fill[sloth!40!black,rotate around={10:(1.05, -1.1)}] (1.05, -1.1) ellipse (0.06 and 0.18);	
 	\end{scope}
-	\begin{scope}[scale=1.8,rotate=-30,yshift=7.5cm,xshift=-3.2cm]
+	\begin{scope}[scale=1.8,rotate=-30,yshift=7.9cm,xshift=-2.0cm]
 		% Head %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\fill[sloth]
 		( 0.50,1.67) .. controls ( 0.50,1.91) and ( 0.27,2.10) ..
@@ -197,11 +197,11 @@
 \end{scope}
 
 % confetti
-\node at ({5.4+sin(\thepage)},{28.8-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=2]{confetti}};
+\node at ({5.4+sin(\thepage)},{49-0.0972*(\thepage)}) {\includegraphics[width=\paperwidth,page=2]{confetti}};
 
 
 \end{tikzpicture}
-\pause[360]
+\pause[1000]
 \end{frame}
 
 \end{document}
