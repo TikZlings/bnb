@@ -5,6 +5,7 @@
 \usepackage{anyfontsize}
 \usepackage{tikzlings}
 \usepackage{tikzducks}
+\usepackage{pdfpages}
 \usetikzlibrary{positioning,shapes}
 \definecolor{sloth}{RGB}{137,126,88}
 \setbeamertemplate{navigation symbols}{}
@@ -203,5 +204,10 @@
 \end{tikzpicture}
 \pause[1000]
 \end{frame}
+
+\setbeamercolor{background canvas}{bg=}
+\foreach \x in {1,...,50}{
+	\includepdf{cheering-credits.pdf}
+}
 
 \end{document}
