@@ -1,3 +1,6 @@
+# compile
+pdflatex cheering
+
 # clean up old video
 rm cheering.mp4
 
