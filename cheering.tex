@@ -10,7 +10,7 @@
 \definecolor{sloth}{RGB}{137,126,88}
 \setbeamertemplate{navigation symbols}{}
 \setbeamercolor{background canvas}{bg=gray!70!blue!30!white}
-
+\usetikzlibrary{shapes.callouts}
 \begin{document}
 
 \begin{frame}
@@ -25,6 +25,9 @@
 % Background crowd for cheering
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\node[xshift=7.6cm,yshift=0.2cm+sin(10*\thepage)*cos(10*\thepage)*0.2cm,inner sep=0pt](bee){\includegraphics[scale=0.75]{images/tikzbee}};
+\node[cloud callout,callout absolute pointer={(bee.north)},align=center,fill=white!80!yellow,inner sep=0pt,font=\fontsize{5pt}{6pt}\selectfont] at ([xshift=0.1cm,yshift=0.3cm]bee.north east) {more\\ Beees};
+   
 \penguin[xshift=6.7cm,yshift=-1.8cm,scale=0.8]
 \marmot[xshift=7.2cm,yshift=-2cm,scale=0.8]
 \bear[xshift=1.5cm,yshift=-2cm,scale=0.8]
@@ -101,6 +104,7 @@
 
 \sloth[xshift=4cm,yshift=-2.8cm,scale=0.8]
 \coati[xshift=5cm,yshift=-3cm,scale=0.8]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
